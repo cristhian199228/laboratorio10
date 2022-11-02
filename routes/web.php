@@ -23,3 +23,7 @@ Route::get('/tecsup', function () {
 Route::get('/usuarios', function () {
     return User::All();
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
